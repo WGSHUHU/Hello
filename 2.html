@@ -9,42 +9,7 @@
 <body>
 	
 	<script type="text/javascript">
-		function Stack(){
-			this.top = 0;
-			this.dataStore = [];
-			this.push = push;
-			this.pop = pop;
-			this.peek = peek;
-			this.clear = clear;
-			this.length = length;
-		}
-		function push(element){
-			this.dataStore[this.top++] = element; 
-		}
-		function pop(){
-			return this.dataStore[--this.top];
-		}
-		function peek(){
-			return this.dataStore[this.top-1];
-		}
-		function clear(){
-			this.dataStore = [];
-			this.top = 0;
-		}
-		function length(){
-			return this.top;
-		}
 		
-		var s = new Stack();
-		function Cardinal(n,d){
-			if(n == 0 && n%d==0){
-				return;
-			}
-			s.push(n%d);
-			Cardinal(parseInt(n/d),d);
-		}
-		Cardinal(32,2)
-		console.log(s.dataStore.reverse().join(''));
 	</script>
 </body>
 </html>
